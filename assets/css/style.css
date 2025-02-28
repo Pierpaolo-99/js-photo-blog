@@ -1,0 +1,12 @@
+#site_header{
+    padding: 1rem;
+    background-image: url(../img/wall.png);
+    font-family: "Edu TAS Beginner", cursive;
+    h1{
+        font-size: 5rem;
+    }
+}
+
+body{
+    background-image: url(../img/cork.png);
+}
