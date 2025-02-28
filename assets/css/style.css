@@ -19,6 +19,7 @@ body{
     --bs-card-spacer-x: 0;
     padding: 1rem;
     position: relative;
+    margin: auto;
     margin-bottom: 1.5rem;
     #pin{
         position: absolute;
