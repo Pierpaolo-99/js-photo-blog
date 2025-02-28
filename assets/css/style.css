@@ -2,11 +2,35 @@
     padding: 1rem;
     background-image: url(../img/wall.png);
     font-family: "Edu TAS Beginner", cursive;
+    margin-bottom: 3.5rem;
     h1{
         font-size: 5rem;
+        font-weight: 600;
     }
 }
 
 body{
     background-image: url(../img/cork.png);
+}
+
+.card{
+    --bs-card-spacer-y: 0;
+    --bs-card-title-spacer-y: 0;
+    --bs-card-spacer-x: 0;
+    padding: 1rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+    #pin{
+        position: absolute;
+        right: 8rem;
+        top: -1rem;
+    }
+    .card-subtitle{
+        font-family: "Sometype Mono", monospace;
+        margin-top: 1rem;
+    }
+    .card-title{
+        font-family: "Edu TAS Beginner", cursive;
+        font-weight: 700;
+    }
 }
