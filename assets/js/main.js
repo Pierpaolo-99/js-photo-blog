@@ -42,36 +42,35 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
     // prendo gli elementi card dalla pagina
     const cardEl = document.querySelectorAll('.card')
 
+    // ciclo gli elementi card
     cardEl.forEach(card => {
         
-        card.addEventListener('click', function(){
+        // ad ogni card assegno event listener
+        card.addEventListener('click', function(e){
             console.log(card);
-            overlayEl.classList.add('overlay')
 
-            const url = data.map(object => {
-                return object.url
+            // rendo visibile overlay
+            overlayEl.classList.remove('d-none')
+
+            const img = e.target
+
+            // stampo in pagina il markup della foto cliccata
+            const markupImage = `
+            <img class="overlay_img" src="${img.src}" alt="">
+            `
+            overlayEl.insertAdjacentHTML('beforeend',markupImage)
+
+            // prendo l'elemento button dalla pagina
+            const buttonEl = document.querySelector('.overlay_btn')
+            buttonEl.classList.remove('d-none')
+
+            // assegno event listener al button che fa scomparire l'overlay
+            buttonEl.addEventListener('click', function(){
+                overlayEl.classList.add('d-none')
             })
-            console.log(url);
-
-            for (let i = 0; i < url.length; i++){
-                const thisUrl = url[i]
-                console.log(thisUrl);
-                const markup = `
-                <button class="overlay_btn">chiudi</button>
-                <img class="overlay_img" src="${thisUrl}" alt="">
-                `
-                overlayEl.insertAdjacentHTML('beforeend',markup)
-            }
             
         })
     })
 })
-
-
-/*const markup = `
-<button class="overlay_btn">chiudi</button>
-<img class="overlay_img" src="${element.url}" alt="">
-`
-overlayEl.insertAdjacentHTML('beforeend',markup)*/
 
 
