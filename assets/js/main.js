@@ -41,32 +41,37 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
 
     // prendo gli elementi card dalla pagina
     const cardEl = document.querySelectorAll('.card')
-    const headerEl = document.getElementById('site_header')
 
     cardEl.forEach(card => {
         
         card.addEventListener('click', function(){
             console.log(card);
             overlayEl.classList.add('overlay')
-            card.classList.add('index')
-            headerEl.classList.add('index')
 
-            data.forEach(element => {
-
-                console.log(element.url);
-                
-                /*const markup = `
-                <button class="overlay_btn">chiudi</button>
-                <img class="overlay_img" src="${element.url}" alt="">
-                `
-                overlayEl.insertAdjacentHTML('beforeend',markup)*/
+            const url = data.map(object => {
+                return object.url
             })
+            console.log(url);
+
+            for (let i = 0; i < url.length; i++){
+                const thisUrl = url[i]
+                console.log(thisUrl);
+                const markup = `
+                <button class="overlay_btn">chiudi</button>
+                <img class="overlay_img" src="${thisUrl}" alt="">
+                `
+                overlayEl.insertAdjacentHTML('beforeend',markup)
+            }
             
         })
     })
 })
 
 
-
+/*const markup = `
+<button class="overlay_btn">chiudi</button>
+<img class="overlay_img" src="${element.url}" alt="">
+`
+overlayEl.insertAdjacentHTML('beforeend',markup)*/
 
 
