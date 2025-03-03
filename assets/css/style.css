@@ -68,6 +68,11 @@ body{
         font-family: "Edu TAS Beginner", cursive;
         font-weight: 700;
     }
+
+}
+
+.col:hover{
+    transform: rotate(10deg);
 }
 
 .h5, h5 {
