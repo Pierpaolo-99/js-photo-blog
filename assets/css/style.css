@@ -68,7 +68,7 @@ body{
 }
 
 .col:hover{
-    transition: 0.5;
+    transition: 0.3s;
     transform: rotate(10deg) scale(1.2);
     z-index: 2;
     cursor: pointer;
