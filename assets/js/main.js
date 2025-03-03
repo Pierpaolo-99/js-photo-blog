@@ -52,7 +52,8 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
             // rendo visibile overlay
             overlayEl.classList.remove('d-none')
 
-            const img = e.target
+            // prendo l'elemento image delle card
+            const img = card.querySelector('.card-img-top');
 
             // stampo in pagina il markup della foto cliccata
             const markupImage = `
