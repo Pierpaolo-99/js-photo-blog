@@ -43,10 +43,6 @@ body{
     transform: translate(-50%, -50%);
 }
 
-.index{
-    z-index: -2;
-}
-
 .card{
     --bs-card-spacer-y: 0;
     --bs-card-title-spacer-y: 0;
