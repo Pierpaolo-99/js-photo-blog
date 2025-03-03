@@ -1,6 +1,7 @@
 // prendo gli elementi dall'HTML
 
 const rowEl = document.querySelector('.row')
+const overlayEl = document.getElementById('overlay')
 
 // creo la funzione per inserire il markup nella pagina
 function renderMarkup (url,date,title){
@@ -37,4 +38,23 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
         renderMarkup(element.url,element.date,element.title)
         
     });
+
+    // prendo gli elementi card dalla pagina
+    const cardEl = document.querySelectorAll('.card')
+    const headerEl = document.getElementById('site_header')
+
+    cardEl.forEach(card => {
+        
+        card.addEventListener('click', function(){
+            console.log(card);
+            overlayEl.classList.add('overlay')
+            cardEl.classList.add('index')
+            headerEl.classList.add('index')
+        })
+    })
 })
+
+
+
+
+

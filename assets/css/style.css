@@ -1,6 +1,7 @@
 #site_header{
     padding: 1rem;
     background-image: url(../img/wall.png);
+    z-index: -1;
     font-family: "Edu TAS Beginner", cursive;
     margin-bottom: 3rem;
     h1{
@@ -11,6 +12,16 @@
 
 body{
     background-image: url(../img/cork.png);
+    z-index: -1;
+}
+
+.overlay{
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2;
+}
+
+.index{
+    z-index: -2;
 }
 
 .card{
