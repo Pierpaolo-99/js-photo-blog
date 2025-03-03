@@ -48,8 +48,20 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
         card.addEventListener('click', function(){
             console.log(card);
             overlayEl.classList.add('overlay')
-            cardEl.classList.add('index')
+            card.classList.add('index')
             headerEl.classList.add('index')
+
+            data.forEach(element => {
+
+                console.log(element.url);
+                
+                /*const markup = `
+                <button class="overlay_btn">chiudi</button>
+                <img class="overlay_img" src="${element.url}" alt="">
+                `
+                overlayEl.insertAdjacentHTML('beforeend',markup)*/
+            })
+            
         })
     })
 })
